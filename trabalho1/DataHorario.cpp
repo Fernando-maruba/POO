@@ -44,30 +44,89 @@ int DataHorario::getSegundo()
 
 void DataHorario::imprime(bool a)
 {
-    if(mes>=10)
-    cout << dia << "/" << mes << "/" << ano << " ";
+    if (dia >= 10)
+        cout << dia;
     else
-    cout << dia << "/" << "0" << mes << "/" << ano << " ";
+        cout << "0" << dia;
+    if (mes >= 10)
+        cout << "/" << mes << "/" << ano << " ";
+    else
+        cout << "/"
+             << "0" << mes << "/" << ano << " ";
     if (a)
     {
         if (hora > 12)
         {
-            cout << "0" <<  hora - 12 << ":" << minuto << ":" << segundo << " PM." << endl;
+            if (hora - 12 < 10)
+                cout << "0" << hora - 12;
+            else
+                cout << hora - 12;
         }
         else
         {
-            cout << hora << ":" << minuto << ":" << segundo << "AM." << endl;
+            if (hora < 10)
+                cout << "0" << hora;
+            else
+                cout << hora;
         }
     }
     else
     {
+        if (hora >= 10)
+            cout << hora;
+        else
+            cout << "0" << hora;
+    }
+    if (minuto < 10)
+        cout << ":0" << minuto;
+    else
+        cout << ":" << minuto;
+    if (a)
+    {
         if (hora < 12)
-        cout << "0" << hora << ":" << minuto << ":" << segundo << endl;
+        {
+            if (segundo < 10)
+                cout << ":0" << segundo << " AM" << endl;
+            else
+                cout << ":" << segundo << " AM" << endl;
+        }
+        else
+        {
+            if (segundo < 10)
+                cout << ":0" << segundo << " PM" << endl;
+            else
+                cout << ":" << segundo << " PM" << endl;
+        }
+    }
+    else
+    {
+        if (segundo < 10)
+            cout << ":0" << segundo << endl;
+        else
+            cout << ":" << segundo << endl;
     }
 }
 
 void DataHorario::imprimePorExtenso()
 {
-    string anoExtenso[12] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
-    cout << dia << " de " << anoExtenso[mes - 1] << " de " << ano << " -- " << hora << " horas, " << minuto << " minutos e " << segundo << " segundos." << endl;
+    string anoExtenso[12] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "junho",
+                             "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+    if (dia >= 10)
+        cout << dia << " de ";
+    else
+        cout << "0" << dia << " de ";
+
+    cout << anoExtenso[mes - 1] << " de " << ano << " -- ";
+    if (hora >= 10)
+        cout << hora << " hora(s), ";
+    else
+        cout << "0" << hora << " hora(s), ";
+    if (minuto < 10)
+        cout << "0" << minuto << " minuto(s) e ";
+    else
+        cout << minuto << " minuto(s) e ";
+    if (segundo < 10)
+        cout << "0" << segundo << " segundo(s)." << endl;
+    else
+        cout << segundo << " segundo(s)." << endl;
 }
