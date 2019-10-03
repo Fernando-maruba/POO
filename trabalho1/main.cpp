@@ -28,5 +28,19 @@ int main()
     d1.imprime(1);
     d1.imprimePorExtenso();
 
+    DataHorario d2(5, 9, 1998, 21, 9, 18);
+    d2.getAno();
+    d2.getDia();
+    d2.getMes();
+    d2.getHora();
+    d2.getMinuto();
+    d2.getSegundo();
+
+    d2.imprime(0);
+    d2.imprimePorExtenso();
+
+    cout << d2.compara(d1) << endl;
+
+
     return 0;
 }

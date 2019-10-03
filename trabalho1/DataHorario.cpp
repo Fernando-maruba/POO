@@ -130,3 +130,50 @@ void DataHorario::imprimePorExtenso()
     else
         cout << segundo << " segundo(s)." << endl;
 }
+
+int DataHorario::compara(DataHorario &a)
+{
+    int i;
+    if (ano > a.ano)
+        i = 1;
+    else if (ano < a.ano)
+        i = -1;
+    else
+    {
+        if (mes > a.mes)
+            i = 1;
+        else if (mes < a.mes)
+            i = -1;
+        else
+        {
+            if (dia > a.dia)
+                i = 1;
+            else if (dia < a.dia)
+                i = -1;
+            else
+            {
+                if (hora > a.hora)
+                    i = 1;
+                else if (hora < a.hora)
+                    i = -1;
+                else
+                {
+                    if (minuto > a.minuto)
+                        i = 1;
+                    else if (minuto < a.minuto)
+                        i = -1;
+                    else
+                    {
+                        if (segundo > a.segundo)
+                            i = 1;
+                        else if (segundo < a.segundo)
+                            i = -1;
+                        else
+                            i = 0;
+                    }
+                }
+            }
+        }
+    }
+    return i;
+}
