@@ -2,6 +2,7 @@
 #define DATAHORARIO_H
 #include <iostream>
 using namespace std;
+namespace poo {
 
 class DataHorario{
     public: 
@@ -20,5 +21,5 @@ class DataHorario{
     private:
     int dia, mes, ano, hora, minuto, segundo;
 };
-
+}
 #endif /*DATAHORARIO_H*/

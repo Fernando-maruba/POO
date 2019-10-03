@@ -4,6 +4,7 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
+using namespace poo;
 
 int main()
 {
@@ -28,7 +29,7 @@ int main()
     d1.imprime(1);
     d1.imprimePorExtenso();
 
-    DataHorario d2(5, 9, 1998, 21, 9, 18);
+    DataHorario d2(21, 9, 19908, 21, 9, 19);
     d2.getAno();
     d2.getDia();
     d2.getMes();

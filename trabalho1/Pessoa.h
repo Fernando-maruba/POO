@@ -3,7 +3,7 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
-
+namespace poo{
 class Pessoa
 {
 private:
@@ -16,5 +16,5 @@ public:
     int getCPF();
     void imprime();
 };
-
+}
 #endif

@@ -1,5 +1,7 @@
 #include "DataHorario.h"
 
+namespace poo {
+
 DataHorario::DataHorario(int dia, int mes, int ano, int hora, int minuto, int segundo)
 {
     this->dia = dia;
@@ -176,4 +178,5 @@ int DataHorario::compara(DataHorario &a)
         }
     }
     return i;
+}
 }

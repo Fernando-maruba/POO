@@ -1,5 +1,6 @@
 #include "Aluno.h"
 #include "Pessoa.h"
+namespace poo{
 
 Aluno::Aluno(string nome, int cpf, int RA, double n1, double n2, double t1, double t2, double t3) : Pessoa(nome, cpf)
 {
@@ -71,4 +72,5 @@ double Aluno::notaSAC()
         SAC = 12 - Aluno::media();
     }
     return SAC;
+}
 }

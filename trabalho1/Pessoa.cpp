@@ -2,23 +2,30 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
+namespace poo
+{
 
-Pessoa::Pessoa(string nome, int cpf) : nome(nome), cpf(cpf){
+Pessoa::Pessoa(string nome, int cpf) : nome(nome), cpf(cpf)
+{
 }
 
-Pessoa::~Pessoa(){
-
+Pessoa::~Pessoa()
+{
 }
 
-string Pessoa::getnome(){
+string Pessoa::getnome()
+{
     return nome;
 }
 
-int Pessoa::getCPF(){
+int Pessoa::getCPF()
+{
     return cpf;
 }
 
-void Pessoa::imprime(){
+void Pessoa::imprime()
+{
     cout << "o nome eh " << nome << endl;
     cout << "o CPF eh " << cpf << endl;
 }
+} // namespace poo

@@ -1,7 +1,7 @@
 #ifndef ALUNO_H
 #define ALUNO_H
-
 #include "Pessoa.h"
+namespace poo{
 
 class Aluno : public Pessoa
 {
@@ -20,5 +20,5 @@ private:
     int cpf, RA;
     double n1, n2, t1, t2, t3;
 };
-
+}
 #endif
