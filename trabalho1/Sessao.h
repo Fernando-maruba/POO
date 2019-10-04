@@ -5,7 +5,7 @@
 namespace poo{
 class Sessao {
     public:
-    Sessao(string nomePeca, DataHorario &d);
+    Sessao(string nomePeca[], DataHorario &d);
     ~Sessao();
     string proximoLivre();
     bool verifica(string);
