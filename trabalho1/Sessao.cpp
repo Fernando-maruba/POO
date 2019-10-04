@@ -1,14 +1,17 @@
 #include "Sessao.h"
 #include "DataHorario.h"
+#include "Pessoa.h"
 #include "string.h"
 #include <iostream>
 using namespace std;
 namespace poo
 {
-Sessao::Sessao(string nomePeca[], DataHorario &d)
+Sessao::Sessao(string nomePeca, DataHorario &d) : nomePeca(nomePeca), d(d)
 {
-    memset(nomePeca, NULL, 209);
-    DataHorario h(d);
+   Pessoa pessoasTeatro[210];
+    for (int i=0; i <=210; i++){
+        pessoasTeatro[i] = NULL;
+    }
 }
 Sessao::~Sessao(){
 
@@ -16,22 +19,25 @@ Sessao::~Sessao(){
 string Sessao::proximoLivre()
 {
     int i = 0, n = 209;
-    while ((nomePeca[i] == NULL) && i != n+1)
+    while (i != n + 1)
     {
+        if (!(pessoasTeatro[i].compare(NULL)))
+        {
+            if (i != n + 1)
+            {
+
+                if (i < 14)
+                {
+                    return "a0";
+                }
+                else if (i < 28)
+                    return "a1";
+
+                else
+                    return "Cheio";
+            }
+        }
         i++;
     }
-    if (i != n+1){
-        if (i < 14){
-            return "a0";
-        }
-        else if (i < 28)
-            return "a1";
-    }
-    else
-        return "Cheio";
-}
-
-bool Sessao::verifica(string a){
-    if 
-}
+};
 } // namespace poo

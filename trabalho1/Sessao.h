@@ -5,7 +5,7 @@
 namespace poo{
 class Sessao {
     public:
-    Sessao(string nomePeca[], DataHorario &d);
+    Sessao(string nomePeca, DataHorario &d);
     ~Sessao();
     string proximoLivre();
     bool verifica(string);
@@ -15,7 +15,8 @@ class Sessao {
     void imprime();
     private:
     string nomePeca;
-    DataHorario *d;
+    DataHorario &d;
+    Pessoa pessoaTeatro[210];
 };
 }
 #endif

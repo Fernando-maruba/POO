@@ -42,8 +42,7 @@ int main()
     d2.imprimePorExtenso();
 
     cout << d2.compara(d1) << endl;
-    string peca1[209];
-    Sessao sessao1(peca1, d2);
+    Sessao sessao1("Nomefilme", d2);
     
     cout << sessao1.proximoLivre() << endl;
     return 0;
