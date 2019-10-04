@@ -1,7 +1,8 @@
 #include "DataHorario.h"
 
-namespace poo {
-
+namespace poo
+{
+//Construtor de uma nova DataHorario
 DataHorario::DataHorario(int dia, int mes, int ano, int hora, int minuto, int segundo)
 {
     this->dia = dia;
@@ -11,9 +12,11 @@ DataHorario::DataHorario(int dia, int mes, int ano, int hora, int minuto, int se
     this->minuto = minuto;
     this->segundo = segundo;
 }
+//Destrutor do objeto
 DataHorario::~DataHorario()
 {
 }
+//As funçoes abaixo são para pegar os atributos que sao privados da classe para utilizar nas outras funçoes
 int DataHorario::getDia()
 {
     return dia;
@@ -43,7 +46,7 @@ int DataHorario::getSegundo()
 {
     return segundo;
 }
-
+//Funçao para imprimir a data e o horario no formato AM/PM (caso o booleano passado seja 1), ou no formato de 24h (caso o booleano passado seja 0)
 void DataHorario::imprime(bool a)
 {
     if (dia >= 10)
@@ -108,7 +111,7 @@ void DataHorario::imprime(bool a)
             cout << ":" << segundo << endl;
     }
 }
-
+// Funçao para imprimir a data e hora por extenso
 void DataHorario::imprimePorExtenso()
 {
     string anoExtenso[12] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "junho",
@@ -132,7 +135,7 @@ void DataHorario::imprimePorExtenso()
     else
         cout << segundo << " segundo(s)." << endl;
 }
-
+// Funçao que compara uma DataHora com outra e retorna 1 se a primeira for maior, 0 se forem iguais, e -1 se a primeira for menor que a segunda.
 int DataHorario::compara(DataHorario &a)
 {
     int i;
@@ -179,4 +182,4 @@ int DataHorario::compara(DataHorario &a)
     }
     return i;
 }
-}
+} // namespace poo
