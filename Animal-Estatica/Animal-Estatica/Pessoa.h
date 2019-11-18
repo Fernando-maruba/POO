@@ -1,0 +1,24 @@
+#ifndef PESSOA_H
+#define PESSOA_H
+
+#include "AnimalDomestico.h"
+
+class Pessoa {
+public:
+    Pessoa(string nome, int idade);
+    virtual ~Pessoa();
+    int getIdade() const;
+    void setIdade(int idade);
+    string getNome() const;
+    void setNome(string nome);
+    void adiciona(AnimalDomestico* a);
+    void remove(string nome);
+    void imprime();
+private:
+    string nome;
+    int idade;
+    AnimalDomestico* animais[5];
+    int qtde;
+};
+
+#endif /* PESSOA_H */

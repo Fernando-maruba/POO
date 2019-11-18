@@ -7,6 +7,10 @@ int main(int argc, char **argv)
     datas d2(20, 8, 2020);
     datas d3(20, 8, 2019);
 
+    datas* data = new datas(21,9,1998);
+    data->imprimeextenso();
+    data->imprime();
+
     d1.imprime();
     d1.imprimeextenso();
 

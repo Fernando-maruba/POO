@@ -1,7 +1,6 @@
 #include "Pessoa.h"
 #include "Aluno.h"
 #include "DataHorario.h"
-#include "Sessao.h"
 #include <string.h>
 #include <iostream>
 using namespace std;
@@ -42,8 +41,9 @@ int main()
     d2.imprimePorExtenso();
 
     cout << d2.compara(d1) << endl;
-    Sessao sessao1("Nomefilme", d2);
-    
-    cout << sessao1.proximoLivre() << endl;
+    Pessoa* p1 = new Pessoa("Fernando", 123123);
+    p1->getnome();
+    p1->getnome();
+    p1->imprime();
     return 0;
 }

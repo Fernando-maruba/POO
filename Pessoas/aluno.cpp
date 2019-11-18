@@ -1,5 +1,5 @@
 #include "aluno.h"
-#include "pessoa.h"
+#include "pessoas.h"
 
 Aluno::Aluno(string nome, int idade, int RA) : Pessoa(nome, idade) ,RA(RA){
 

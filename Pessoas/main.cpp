@@ -16,11 +16,16 @@ int main(int argc, char** argv) {
  cout << p1.compare(p2) << endl;
  cout << p1.compare(p3) << endl;
  cout << p2.compare(p1) << endl;
+ Pessoa* pessoa1 = new Pessoa("Joao", 12);
+ pessoa1->imprime();
+cout << "ajdlaskfjhasd" << endl;
 
 Aluno a1("Aluno teste", 18, 927450);
  a1.imprime();
 
  cout << p1.compare(a1);
+
+ 
 
  return 0;
 }
