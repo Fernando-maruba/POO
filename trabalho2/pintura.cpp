@@ -5,9 +5,12 @@ using namespace std;
 
 namespace catalogo
 {
+//construtora
 pintura::pintura(string titulo, string artista, string material, int anoCriacao, string tipo) : obra(titulo, artista, material, anoCriacao), tipo(tipo)
 {
+
 }
+//destrutora
 pintura::~pintura()
 {
 }
@@ -21,7 +24,7 @@ int pintura::getCategoria()
 {
     return 1;
 }
-
+//imprime a ficha de uma pintura
 void pintura::imprimeFicha()
 {
     cout << "Categoria: Pintura" << endl;

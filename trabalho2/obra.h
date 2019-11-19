@@ -24,7 +24,8 @@ public:
     void setArtista(string artista);
     void setMaterial(string material);
     void setAno(int ano);
-
+    static bool comparaTitulo(obra* o1, obra* o2);
+    static bool comparaAno(obra* o1, obra* o2);
 private:
     string titulo, artista, material;
     int ano;
