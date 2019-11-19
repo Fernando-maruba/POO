@@ -1,6 +1,6 @@
 #ifndef MUSEU_H
 #define MUSEU_H
-
+#include "obra.h"
 #include "pintura.h"
 #include "escultura.h"
 #include <vector>
