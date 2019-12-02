@@ -1,3 +1,5 @@
+/*ALUNO: FERNANDO OGATA MARUBAYASHI
+  RA: 758576 */
 #include <iostream>
 #include "obra.h"
 #include "pintura.h"
